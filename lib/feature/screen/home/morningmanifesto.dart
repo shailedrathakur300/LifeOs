@@ -95,14 +95,16 @@ class _MorningManifestoPageState extends State<MorningManifestoPage> with Automa
             textInputAction: TextInputAction.newline,
             maxLines: null,
             decoration: const InputDecoration(
-              hintText: 'Type a list... (e.g., - My first point)',
+              hintText: '..',
             ),
           ),
           const SizedBox(height: 20),
           const Text("I am grateful for...."),
           TextField(
             controller: _gratefulController,
-            textInputAction: TextInputAction.done,
+            keyboardType: TextInputType.multiline,
+            textInputAction: TextInputAction.newline,
+            maxLines: null,
           ),
         ],
       ),

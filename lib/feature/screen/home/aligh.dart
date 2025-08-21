@@ -71,10 +71,17 @@ class _OnboardingLifeOSScreenState extends State<OnboardingLifeOSScreen> {
       delegate: SliverChildListDelegate([
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-          child: Text(
-            "LifeOS Quests, Projects & Tasks Tracker",
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+          child: Center(
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                foregroundColor: Theme.of(context).colorScheme.onPrimary,
+              ),
+              child: const Text("Align", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            ),
           ),
         ),
         // The horizontally scrolling section is constrained to 50% of the screen height.
